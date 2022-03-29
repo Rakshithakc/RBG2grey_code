@@ -1,13 +1,24 @@
 import cv2
 #pip install opencv-python
 
-image = cv2.imread("friends.jpg")
+image1 = cv2.imread("friends.jpg")
 #Replace "captain.jpg" with your image
 
-grey_img = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-invert = cv2.bitwise_not(grey_img)
-blur = cv2.GaussianBlur(invert,(21,21),0)
-invertedblur = cv2.bitwise_not(blur)
-output = cv2.divide(grey_img, invertedblur, scale=256.0)
+grey_img1 = cv2.cvtColor(image1,cv2.COLOR_BGR2GRAY)
+invert1 = cv2.bitwise_not(grey_img1)
+blur1 = cv2.GaussianBlur(invert1,(21,21),0)
+invertedblur1 = cv2.bitwise_not(blur1)
+output1 = cv2.divide(grey_img1, invertedblur1, scale=256.0)
+cv2.imwrite("output1.png",output1)
 
-cv2.imwrite("output.png",output)
+
+
+image2 = cv2.imread("Rakshu.JPG")
+#Replace "captain.jpg" with your image
+
+grey_img2 = cv2.cvtColor(image2,cv2.COLOR_BGR2GRAY)
+invert2 = cv2.bitwise_not(grey_img2)
+blur2 = cv2.GaussianBlur(invert2,(21,21),0)
+invertedblur2 = cv2.bitwise_not(blur2)
+output2 = cv2.divide(grey_img2, invertedblur2, scale=256.0)
+cv2.imwrite("output2.png",output2)
